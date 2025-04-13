@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1><i class="fas fa-tasks"></i> To-Do List <i class="fas fa-tasks"></i></h1>
+            <p class="po"><i class="i1 fas fa-arrow-down"></i>Add You Task below <i class="fas fa-arrow-down"></i></p>
+        </header>
+        <main>
+        <p class="p1 ">
+            hint: just select for task you have completed and wanna review later.
+        </p>
+
+        <div class="input-section ">
+            <input type="text" id="taskInput" placeholder="Add a new task..." autofocus>
+            <button id="addTaskBtn">
+                <i class="fas fa-plus"></i> 
+                Add Task
+                <i class="fas fa-plus"></i> 
+            </button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all"> 
+                All</button>
+            <button class="filter-btn" data-filter="active">
+                <i class="fas fa-circle text-primary fa-1x"></i>
+                Active
+                <i class="fas fa-circle text-primary fa-1x"></i>
+            </button>
+            <button class="filter-btn" data-filter="completed">
+                <i class="fas fa-check-circle fa-1x text-success"></i> 
+                Completed
+                <i class="fas fa-check-circle fa-1x text-success"></i> 
+            </button>
+        </div>
+
+        <div class="task-stats">
+            <span id="totalTasks">0 tasks</span>
+            <span id="completedTasks">0 completed</span>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="actions-section">
+            <button id="clearCompletedBtn">Clear Completed</button>
+            <button id="saveTasksBtn">Save Tasks</button>
+        </div>
+        </main>
+        <footer>
+            <p>this  is yours</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
